@@ -1,0 +1,23 @@
+.hidden-link {
+    color: unset;
+    text-decoration: none;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+@for $i from 1 through 7 {
+    .g-#{$i} {
+        gap: $i * .5rem;
+    }
+}
+

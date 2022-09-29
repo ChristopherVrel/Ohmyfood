@@ -1,0 +1,126 @@
+.jumbotron {
+    background-color: $c-light-grey;
+    padding: 1rem 2rem 3rem 2rem;
+    text-align: center;
+
+    h3 {
+        padding: 1rem 3rem;
+    }
+    p {
+        margin-top: 0;
+        margin-bottom: 1.75rem;
+    }
+    button {
+        padding: 1rem;
+        background: linear-gradient(170deg, $secondary, $primary);
+        border-radius: 2rem;
+        border: unset;
+        color: $c-white;
+        padding: 1rem 1.25rem;
+        box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 25%);
+    }
+}
+
+#functioning {
+    padding: 2rem 1rem 3rem 1rem;
+    h3 {
+        padding-bottom: 1.5rem;
+    }
+    .functioning-content {
+        .functioning-card {
+            background-color: $c-light-grey;;
+            padding: 1.5rem 2rem;
+            border-radius: 1.25rem;
+            position: relative;
+
+            i {
+                opacity: 50%;
+            }
+
+            .functioning-card-text {
+                padding-left: 1.5rem;
+                margin: 0;
+                font-weight: 600;
+            }
+
+            .functioning-card-content {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                font-size: .75rem;
+                color: $c-white;
+            }
+
+            $circle-size: 1.25rem;
+            margin-left: calc($circle-size / 2);
+
+            @include circle(
+                $circle-size,
+                $color: $primary, 
+                $top: 50%
+            );
+
+            @include boxShadow();
+        }
+
+        @include flexRowMedium();
+    }
+}
+
+#store {
+    padding: 2rem 1rem 3rem 1rem;
+    background-color: $c-light-grey;
+    h3 {
+        padding-bottom: 1.5rem;
+    }
+    .card {
+        border-radius: 1rem;
+
+        @include boxShadow();
+
+        img {
+            width: 100%;
+            max-height: 10rem;
+            border-radius: 1rem 1rem 0 0;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .card-body {
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+
+            .card-body-content {
+                h4 {
+                    margin: 0 0 .15rem 0;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+
+            i {
+                font-size: 1.25rem;
+            }
+        }
+    }
+}
+
+.footer {
+    color: $c-white;
+    background-color: $c-heavy-grey;
+    padding: 1rem 1rem 2rem 1rem;
+    h3 {
+        font-family: $title;
+        color: $c-white;
+        margin-bottom: .65rem;
+    }
+    .footer-content {
+        a {
+            margin-bottom: .45rem
+        }
+    }
+}
