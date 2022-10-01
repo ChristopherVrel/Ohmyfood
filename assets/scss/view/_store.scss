@@ -1,0 +1,113 @@
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    background-color: $c-light-grey;
+    
+    img {
+        height: 17rem;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .menu {
+        background-color: $c-light-grey;
+        padding: 2rem .85rem 1.5rem .85rem;
+        border-radius: 2rem 2rem 0 0;
+        transform: translateY(-2rem);
+
+        .menu-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+
+            h2 {
+                font-family: $title;
+                font-weight: unset;
+            }
+            i {
+                font-size: 1.5rem;
+                margin-right: 1.75rem;
+            }
+        }
+
+        .menu-content {
+            margin-bottom: 2rem;
+
+            h4 {
+                color: inherit;
+                font-weight: unset;
+                margin-bottom: .85rem;
+                width: fit-content;
+                position: relative;
+                padding-bottom: 0.5rem;
+
+                &:after {
+                    content: "";
+                    border-bottom: 3px solid $tertiary;
+                    width: 3rem;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                }
+            }
+
+            .menu-content-cards {
+                .menu-content-card {
+                    display: flex;
+                    background-color: $c-light-grey;
+                    padding: .75rem 1.5rem .75rem .75rem;
+                    border-radius: 1.25rem;
+                    
+                    .menu-card-body {
+                        display: flex;
+                        flex-direction: column;
+                        flex-grow: 1;
+
+                        p {
+                            margin: 0;
+                        }
+
+                        .menu-card-title {
+                            font-weight: 700;
+                            font-size: 1.1rem;
+                            margin-bottom: 0.35rem;
+                        }
+                        .menu-card-text {
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            width: 90%;
+                            font-size: .9rem;
+                        }
+                    }
+
+                    .menu-card-price {
+                        margin: 0;
+                        display: flex;
+                        align-items: flex-end;
+                        font-weight: 900;
+                    }
+
+                    @include boxShadow();
+                }
+            }
+        }
+
+        .button-container {
+            width: 100%;
+            text-align: center;
+            margin-top: 3rem;
+
+            .menu-button {
+                @include buttonGradient();
+    
+                font-size: 1rem;
+                cursor: pointer;
+                font-weight: 600;
+                padding: 1rem 3rem;
+            }
+        }
+    }
+}

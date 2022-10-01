@@ -7,11 +7,14 @@ body {
     margin: 0;
     font-family: $text;
     color: $c-heavy-grey;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 h1, h2, h3, h4 {

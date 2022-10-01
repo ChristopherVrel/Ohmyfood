@@ -4,7 +4,7 @@ header {
         flex-direction: column;
         align-items: center;
 
-        a {
+        .nav-brand {
             padding: 1rem 0 0.5rem 0;
             text-align-last: center;
             width: 100%;
@@ -15,7 +15,17 @@ header {
                 height: 1.85rem;
             }
         }
-
+        .nav-menu {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a {
+                position: absolute;
+                left: 0;
+                margin-left: 1.25rem;
+            }
+        }
         #search-container {
             background-color: $c-grey;
             width: 100%;
@@ -23,15 +33,24 @@ header {
             padding: 1rem;
             display: flex;
             justify-content: center;
+
             form {
                 width: fit-content;
+                display: flex;
+                justify-content: center;
+
                 input {
-                    text-align: center;
                     border: none;
                     background-color: unset;
                     font-weight: 600;
                     color: inherit;
-                    margin-left: 0.75rem;
+                    margin-left: 0.5rem;
+                    width: 60%;
+
+                    // adapting the placeholder width when the box is empty
+                    &:placeholder-shown {
+                        width: 100%;
+                    }
                 }
             }
         }

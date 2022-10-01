@@ -13,13 +13,13 @@
     <body>
         <header>
             <nav>
-                <a href="./index.html">
+                <a class="nav-brand" href="./index.html">
                     <img src="./assets/img/logo/ohmyfood.png" alt="">
                 </a>
                 <div id="search-container">
                     <form>
                         <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <input type="text" name="city" placeholder="Recherchez dans votre ville" value="Paris, Belleville">
+                        <input pattern="\S+.*" required type="text" name="city" placeholder="Recherchez dans votre ville" value="Paris, Belleville">
                     </form>
                 </div>
             </nav>
@@ -53,8 +53,8 @@
             <section id="store">
                 <h3>Restaurants</h3>
                 <div class="d-flex flex-column g-3 store-content">
-                    <a class="hidden-link card d-flex flex-column" href="#">
-                        <img src="./assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                    <a class="hidden-link card d-flex flex-column" href="./store/la-palette-du-gout.html">
+                        <img id="store-first" src="./assets/img/restaurants/low/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
                         <div class="card-body d-flex">
                             <div class="card-body-content">
                                 <h4 class="card-title">La palette du goût</h4>
@@ -63,32 +63,32 @@
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </a>
-                    <a class="hidden-link card d-flex flex-column" href="#">
-                        <img src="./assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
+                    <a class="hidden-link card d-flex flex-column" href="./store/la-note-enchantee.html">
+                        <img id="store-second" src="./assets/img/restaurants/low/stil-u2Lp8tXIcjw-unsplash.jpg" alt="">
                         <div class="card-body d-flex">
                             <div class="card-body-content">
-                                <h4 class="card-title">La palette du goût</h4>
-                                <p class="card-text">Ménilmontant</p>
+                                <h4 class="card-title">La note enchantée</h4>
+                                <p class="card-text">Charonne</p>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </a>
-                    <a class="hidden-link card d-flex flex-column" href="#">
-                        <img src="./assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
+                    <a class="hidden-link card d-flex flex-column" href="./store/a-la-francaise.html">
+                        <img id="store-third" src="./assets/img/restaurants/low/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="">
                         <div class="card-body d-flex">
                             <div class="card-body-content">
-                                <h4 class="card-title">La palette du goût</h4>
-                                <p class="card-text">Ménilmontant</p>
+                                <h4 class="card-title">À la française</h4>
+                                <p class="card-text">Cité Rouge</p>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
                     </a>
-                    <a class="hidden-link card d-flex flex-column" href="#">
-                        <img src="./assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
+                    <a class="hidden-link card d-flex flex-column" href="./store/le-delice-des-sens.html">
+                        <img id="store-fourth" src="./assets/img/restaurants/low/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="">
                         <div class="card-body d-flex">
                             <div class="card-body-content">
-                                <h4 class="card-title">La palette du goût</h4>
-                                <p class="card-text">Ménilmontant</p>
+                                <h4 class="card-title">Le délice des sens</h4>
+                                <p class="card-text">Folie-Méricourt</p>
                             </div>
                             <i class="fa-regular fa-heart"></i>
                         </div>
@@ -100,10 +100,10 @@
             <div class="footer">
                 <h3>ohmyfood</h3>
                 <div class="footer-content d-flex flex-column">
-                    <a class="hidden-link" href="#">Proposer un restaurant</a>
-                    <a class="hidden-link" href="#">Devenir partenaire</a>
+                    <a class="hidden-link" href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a>
+                    <a class="hidden-link" href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a>
                     <a class="hidden-link" href="#">Mentions légales</a>
-                    <a class="hidden-link" href="#">Contact</a>
+                    <a class="hidden-link" href="mailto: contact@ohmyfood.com">Contact</a>
                 </div>
             </div>
         </footer>
