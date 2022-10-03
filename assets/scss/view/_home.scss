@@ -10,11 +10,25 @@
         margin-top: 0;
         margin-bottom: 1.75rem;
     }
-    button {
-        @include buttonGradient();
-        cursor: pointer;
-        font-weight: 600;
+    // button {
+    //     @include buttonGradient();
+    //     cursor: pointer;
+    //     font-weight: 600;
+    // }
+    .button-container {
+        display: flex;
+        justify-content: center;
+
+        a {
+            @include buttonGradient();
+            cursor: pointer;
+            font-weight: 600;
+            display: block;
+            width: fit-content;
+            text-decoration: none;
+        }
     }
+
 }
 
 #functioning {
@@ -61,6 +75,15 @@
             @include boxShadow();
         }
 
+        .functioning-card:last-child {
+            background-color: $c-light-pink;
+            
+            i {
+                color: $primary;
+                opacity: 100%;
+            }
+        }
+
         @include flexRowMedium();
     }
 }
@@ -75,6 +98,10 @@
         border-radius: 1rem;
 
         @include boxShadow();
+
+        &:hover {
+            @include boxShadow(20px, 40%);
+        }
 
         img {
             width: 100%;
@@ -100,6 +127,8 @@
 
             i {
                 font-size: 1.25rem;
+
+                @include heartHover();
             }
         }
 

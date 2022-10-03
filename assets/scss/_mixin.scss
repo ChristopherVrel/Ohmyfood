@@ -18,8 +18,8 @@
     }
 }
 
-@mixin boxShadow() {
-    box-shadow: 0px 3px 13px 0px rgb(0 0 0 / 20%);
+@mixin boxShadow($blurRadius: 13px, $opacity: 20%) {
+    box-shadow: 0px 3px $blurRadius 0px rgb(0 0 0 / #{$opacity});
 }
 
 @mixin responsiveImage($imagepath) {
@@ -42,7 +42,33 @@
     color: $c-white;
     padding: 1rem 1.25rem;
     box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 25%);
+    
     &:hover {
-        transform: translateY(-2px);
+        filter: brightness(1.1);
+        @include boxShadow($opacity: 30%);
+    }
+}
+
+@mixin heartHover() {
+    transition: background 1s ease-in-out;
+    
+    &:hover {
+        background: linear-gradient(170deg, #FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 600;
+        animation: heart-in 1s forwards;
+    }
+
+    @keyframes heart-in {
+        0%   {
+            transform: scale(0.9);
+        }
+        50%  {
+            transform: scale(1.4);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 }

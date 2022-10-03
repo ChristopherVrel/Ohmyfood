@@ -24,6 +24,14 @@ header {
                 position: absolute;
                 left: 0;
                 margin-left: 1.25rem;
+                padding: 0.35rem 0.45rem;
+                transition: .35s ease;
+
+                &:hover {
+                    background: linear-gradient(170deg, #ff79da, #9356dc); 
+                    border-radius: 0.25rem;
+                    color: white;
+                }
             }
         }
         #search-container {

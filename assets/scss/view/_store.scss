@@ -28,6 +28,8 @@
             i {
                 font-size: 1.5rem;
                 margin-right: 1.75rem;
+
+                @include heartHover();
             }
         }
 
@@ -57,13 +59,18 @@
                 .menu-content-card {
                     display: flex;
                     background-color: $c-light-grey;
-                    padding: .75rem 1.5rem .75rem .75rem;
                     border-radius: 1.25rem;
-                    
+                    transform: translateY(15px);
+                    animation: menu-card 1s forwards;
+                    opacity: 0;
+                    overflow: hidden;
+
                     .menu-card-body {
                         display: flex;
                         flex-direction: column;
-                        flex-grow: 1;
+                        flex: 1;
+                        overflow: hidden;
+                        padding: .75rem 0 .75rem .75rem;
 
                         p {
                             margin: 0;
@@ -73,6 +80,9 @@
                             font-weight: 700;
                             font-size: 1.1rem;
                             margin-bottom: 0.35rem;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
                         }
                         .menu-card-text {
                             text-overflow: ellipsis;
@@ -88,9 +98,82 @@
                         display: flex;
                         align-items: flex-end;
                         font-weight: 900;
+                        padding: .75rem 1.5rem .75rem 0;
                     }
 
                     @include boxShadow();
+
+
+                    @for $i from 1 through 10 {
+                        &:nth-child(#{$i}) {
+                            animation-delay: 150ms * $i;
+                        }
+                    }
+
+                    @keyframes menu-card {
+                        from  {
+                            transform: translateY(15px);
+                        }
+                        to {
+                            opacity: 100%;
+                            transform: translateY(0);
+                        }
+                    }
+                    
+                    &:hover {
+                        .menu-check {
+                            width: 4rem;
+
+                            i {
+                                animation: check-in 1s forwards;
+                            }
+                        }
+                    }
+
+                    .menu-check {
+                        border-radius: 0 1.25rem 1.25rem 0;
+                        background-color: $tertiary;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 0;
+                        transition: width .7s ease;
+                        overflow: hidden;
+                        
+                        i {
+                            color: $tertiary; 
+                            transform: rotate(90deg);
+                            opacity: 0;
+                            animation: check-out .8s;
+
+                            &::before {
+                                padding: 0.25rem;
+                                background-color: $c-white;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+
+                    @keyframes check-in {
+                        from {
+                            opacity: 0;
+                            transform: rotate(90deg);
+                        }
+                        to {
+                            opacity: 100%;
+                            transform: rotate(360deg);
+                        }
+                    }
+                    @keyframes check-out {
+                        from {
+                            opacity: 100%;
+                            transform: rotate(360deg);
+                        }
+                        to {
+                            opacity: 0;
+                            transform: rotate(90deg);
+                        }
+                    }
                 }
             }
         }
