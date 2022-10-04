@@ -131,13 +131,47 @@ header nav #search-container form input:-ms-input-placeholder {
 header nav #search-container form input:placeholder-shown {
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  header nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 1rem 5rem 0.5rem 5rem;
+    -webkit-box-shadow: 0px 3px 3px 0px rgb(0 0 0/15%);
+            box-shadow: 0px 3px 3px 0px rgb(0 0 0/15%);
+  }
+  header nav .nav-brand {
+    padding: 0;
+    -moz-text-align-last: unset;
+         text-align-last: unset;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  header nav #search-container {
+    max-width: 15rem;
+    padding: 0;
+    background-color: unset;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  header nav #search-container form {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  header nav #search-container form input {
+    width: 55%;
+  }
+}
 
-.jumbotron {
+.jumbotron .jumbotron-intro {
   background-color: #f6f6f6;
   padding: 1rem 2rem 3rem 2rem;
   text-align: center;
 }
-.jumbotron h3 {
+.jumbotron .jumbotron-intro h3 {
   padding: 1rem 3rem;
 }
 .jumbotron p {
@@ -175,12 +209,63 @@ header nav #search-container form input:placeholder-shown {
   -webkit-box-shadow: 0px 3px 13px 0px rgb(0 0 0/30%);
           box-shadow: 0px 3px 13px 0px rgb(0 0 0/30%);
 }
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    background: url(../../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .jumbotron .overlay {
+    width: 100%;
+    height: 100%;
+    padding: 1rem 1rem 2rem 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    background-color: rgba(26, 26, 26, 0.5019607843);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    min-height: 65vh;
+  }
+  .jumbotron .overlay .jumbotron-intro {
+    background-color: rgba(246, 246, 246, 0.75);
+    border-radius: 1rem;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    max-width: 25rem;
+  }
+  .jumbotron .overlay #functioning {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    padding: 2rem 1rem 2rem 1rem;
+    background-color: rgba(246, 246, 246, 0.75);
+    border-radius: 1rem;
+    max-width: 25rem;
+  }
+  .jumbotron .overlay #functioning h3, .jumbotron .overlay #functioning .functioning-content {
+    width: 100%;
+    gap: 1rem;
+  }
+  .jumbotron .overlay #functioning h3 {
+    text-align: center;
+  }
+}
 
 #functioning {
   padding: 2rem 1rem 3rem 1rem;
 }
 #functioning h3 {
   padding-bottom: 1.5rem;
+  text-align: start;
 }
 #functioning .functioning-content .functioning-card {
   background-color: #f6f6f6;
@@ -228,18 +313,13 @@ header nav #search-container form input:placeholder-shown {
   color: #9356DC;
   opacity: 100%;
 }
-@media screen and (min-width: 768px) {
-  #functioning .functioning-content {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
 
 #store {
   padding: 2rem 1rem 3rem 1rem;
   background-color: #f6f6f6;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 #store h3 {
   padding-bottom: 1.5rem;
@@ -325,7 +405,7 @@ header nav #search-container form input:placeholder-shown {
 }
 @media screen and (min-width: 1200px) {
   #store .card #store-first {
-    content: url(./../../assets/img/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg) !important;
+    content: url(./../../assets/img/restaurants/low/jay-wennington-N_Y88TWmGwA-unsplash.jpg) !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -335,7 +415,7 @@ header nav #search-container form input:placeholder-shown {
 }
 @media screen and (min-width: 1200px) {
   #store .card #store-second {
-    content: url(./../../assets/img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg) !important;
+    content: url(./../../assets/img/restaurants/low/stil-u2Lp8tXIcjw-unsplash.jpg) !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -345,7 +425,7 @@ header nav #search-container form input:placeholder-shown {
 }
 @media screen and (min-width: 1200px) {
   #store .card #store-third {
-    content: url(./../../assets/img/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg) !important;
+    content: url(./../../assets/img/restaurants/low/toa-heftiba-DQKerTsQwi0-unsplash.jpg) !important;
   }
 }
 @media screen and (min-width: 768px) {
@@ -355,7 +435,32 @@ header nav #search-container form input:placeholder-shown {
 }
 @media screen and (min-width: 1200px) {
   #store .card #store-fourth {
-    content: url(./../../assets/img/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) !important;
+    content: url(./../../assets/img/restaurants/low/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg) !important;
+  }
+}
+@media screen and (min-width: 768px) {
+  #store {
+    padding: 2rem 5rem 3rem 5rem;
+  }
+  #store .store-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #store .store-content .card {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #store .store-content .card {
+    -webkit-box-flex: 20%;
+        -ms-flex: 20%;
+            flex: 20%;
   }
 }
 
@@ -376,6 +481,11 @@ header nav #search-container form input:placeholder-shown {
 }
 .footer .footer-content a i {
   margin-right: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    padding: 2rem 5rem 3rem 5rem;
+  }
 }
 
 .menu-container {

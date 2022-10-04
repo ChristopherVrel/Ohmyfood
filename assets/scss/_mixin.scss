@@ -24,13 +24,15 @@
 
 @mixin responsiveImage($imagepath) {
     $normalpath: "./../../assets/img/restaurants/";
+    $lowpath: #{$normalpath} + "low/";
     $mediumpath: #{$normalpath} + "medium/";
 
     @media screen and (min-width: 768px) {
         content: url(#{$mediumpath} + #{$imagepath}) !important;
     }
+    
     @media screen and (min-width: 1200px) {
-        content: url(#{$normalpath} + #{$imagepath}) !important;
+        content: url(#{$lowpath} + #{$imagepath}) !important;
     }
 }
 
