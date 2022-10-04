@@ -486,6 +486,15 @@ header nav #search-container form input:placeholder-shown {
   .footer {
     padding: 2rem 5rem 3rem 5rem;
   }
+  .footer .footer-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .menu-container {
