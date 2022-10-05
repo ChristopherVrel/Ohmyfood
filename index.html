@@ -2,13 +2,16 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="description" content="Ohmyfood! est une entreprise de commande de repas en ligne. Notre concept permet aux utilisateurs de composer leur propre menu et réduire leur temps d’attente dans les restaurants car leur menu est préparé à l’avance. Plus de perte de temps à consulter la carte !">
+        <meta name="keywords" content="OhMyFood, Restaurant, Menu, Repas, Commande">
+        <meta name="author" content="VREL Christopher">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <script src="https://kit.fontawesome.com/5b3e858bca.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/css/main.css">
         
-        <title>Ohmyfood! | - title placeholder -</title>
+        <title>Ohmyfood! | Accueil</title>
     </head>
     <body>
         <header>
@@ -19,7 +22,7 @@
                 <div id="search-container">
                     <form>
                         <i class="fa-sharp fa-solid fa-location-dot"></i>
-                        <input pattern="\S+.*" required type="text" name="city" placeholder="Recherchez dans votre ville" value="Paris, Belleville">
+                        <input type="text" name="city" placeholder="Recherchez dans votre ville" value="Paris, Belleville">
                     </form>
                 </div>
             </nav>
@@ -55,9 +58,7 @@
                         </div>
                     </section>
                 </div>
-
             </section>
-
             <section id="store">
                 <h3>Restaurants</h3>
                 <div class="d-flex flex-column g-3 store-content">
@@ -103,6 +104,15 @@
                     </a>
                 </div>
             </section>
+            <div class="loader">
+                <div class="loader-spinner">
+                    <div id="first-ball" class="ball"></div>
+                    <div id="secondary-ball" class="ball"></div>
+                    <div id="tertiary-ball" class="ball"></div>
+                    <div id="fourth-ball" class="ball"></div>
+                </div>
+                <span class="loader-text">Restaurant en cours de réapprovisionnement</span>
+            </div>
         </main>
         <footer>
             <div class="footer">
