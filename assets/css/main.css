@@ -545,6 +545,14 @@ header nav #search-container form input:placeholder-shown {
 .jumbotron #functioning .functioning-content .functioning-card i {
   opacity: 50%;
 }
+.jumbotron #functioning .functioning-content .functioning-card:hover {
+  background-color: #f5edff;
+  cursor: pointer;
+}
+.jumbotron #functioning .functioning-content .functioning-card:hover i {
+  color: #9356DC;
+  opacity: 100%;
+}
 .jumbotron #functioning .functioning-content .functioning-card .functioning-card-text {
   padding-left: 1.5rem;
   margin: 0;
@@ -571,13 +579,6 @@ header nav #search-container form input:placeholder-shown {
           transform: translate(-50%, -50%);
   top: 50%;
   left: 0;
-}
-.jumbotron #functioning .functioning-content .functioning-card:last-child {
-  background-color: #f5edff;
-}
-.jumbotron #functioning .functioning-content .functioning-card:last-child i {
-  color: #9356DC;
-  opacity: 100%;
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
